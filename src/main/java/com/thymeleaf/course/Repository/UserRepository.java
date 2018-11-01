@@ -1,4 +1,10 @@
 package com.thymeleaf.course.Repository;
 
-public interface UserRepository {
+import com.thymeleaf.course.domain.model.entity.User;
+import org.springframework.data.repository.CrudRepository;
+
+public interface UserRepository extends CrudRepository<User, Integer> {
+
+
+
 }

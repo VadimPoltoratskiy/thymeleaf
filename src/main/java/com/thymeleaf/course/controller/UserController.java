@@ -17,6 +17,10 @@ public class UserController {
 
     final UserService userService;
 
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
+
     @GetMapping(value = "/signup")
     public ModelAndView getSignUpPage(ModelAndView model) {
         model.setViewName("signUp");

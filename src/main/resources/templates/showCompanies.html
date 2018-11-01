@@ -2,9 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <link th:href="@{css/bootstrap.min.css}" rel="stylesheet" media="screen"/>
+
+    <script th:src="@{js/jquery-2.1.4.min.js}"></script>
+    <script th:src="@{js/bootstrap.min.js}"></script>
 </head>
 <body>
-$END$
+
+<h1>Companies:</h1>
+
+<table class="table table-striped">
+
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Workers</th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+    <tr th:each="c: ${companyList}">
+        <td th:text="${w.name}"></td>
+
+    </tr>
+
+    <tr th:each="e: *{employees}" th:object="${employee}">
+        <td th:text="*{id}"></td>
+        <td th:text="*{firstName}"></td>
+        <td th:text="*{lastName}"> </td>
+        <td th:text="*{email}"></td>
+        <td th:text="*{gender}"></td>
+        <td th:text="*{company.name}"></td>
+        <td th:text="*{skill.name}"></td>
+    </tr>
+
+    </tbody>
+</table>
 </body>
 </html>
