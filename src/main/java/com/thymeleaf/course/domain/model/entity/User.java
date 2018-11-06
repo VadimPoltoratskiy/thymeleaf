@@ -3,7 +3,12 @@ package com.thymeleaf.course.domain.model.entity;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.experimental.FieldDefaults;
+import org.springframework.stereotype.Component;
 
+
+import javax.persistence.Entity;
+
+@Component
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class User {
@@ -14,6 +19,10 @@ public class User {
     String email;
     String password;
     String role;
+
+    public User() {
+
+    }
 
     public Long getId() {
         return id;

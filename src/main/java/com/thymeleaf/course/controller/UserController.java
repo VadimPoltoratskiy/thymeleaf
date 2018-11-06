@@ -15,13 +15,9 @@ import org.springframework.web.servlet.ModelAndView;
 @AllArgsConstructor
 public class UserController {
 
-    final UserService userService;
+    UserService userService;
 
-    public UserController(UserService userService) {
-        this.userService = userService;
-    }
-
-    @GetMapping(value = "/signup")
+       @GetMapping(value = "/signup")
     public ModelAndView getSignUpPage(ModelAndView model) {
         model.setViewName("signUp");
         model.addObject("user", new UserSignUpRequest());

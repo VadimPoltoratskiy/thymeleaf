@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.List;
 
 @Controller
-@RequestMapping(value = "/api/companies")
+//@RequestMapping(value = "/api/companies")
 public class CompanyController {
 
     @Autowired
